@@ -11,6 +11,11 @@
 		3000594829E5552700DE9DA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000594729E5552700DE9DA0 /* ContentView.swift */; };
 		3000594A29E5552900DE9DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3000594929E5552900DE9DA0 /* Assets.xcassets */; };
 		3000594D29E5552900DE9DA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3000594C29E5552900DE9DA0 /* Preview Assets.xcassets */; };
+		3000595429E555E500DE9DA0 /* ChatBuddyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000595329E555E500DE9DA0 /* ChatBuddyView.swift */; };
+		3000595729E556E400DE9DA0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3000595629E556E400DE9DA0 /* Alamofire */; };
+		3000595929E556F800DE9DA0 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000595829E556F800DE9DA0 /* OpenAIAPI.swift */; };
+		3000596929E6A7E900DE9DA0 /* ChatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000596829E6A7E900DE9DA0 /* ChatModels.swift */; };
+		3000596B29E6B86200DE9DA0 /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000596A29E6B86200DE9DA0 /* ChatMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		3000594729E5552700DE9DA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3000594929E5552900DE9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3000594C29E5552900DE9DA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3000595329E555E500DE9DA0 /* ChatBuddyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBuddyView.swift; sourceTree = "<group>"; };
+		3000595829E556F800DE9DA0 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
+		3000596829E6A7E900DE9DA0 /* ChatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModels.swift; sourceTree = "<group>"; };
+		3000596A29E6B86200DE9DA0 /* ChatMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3000595729E556E400DE9DA0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +61,12 @@
 		3000594429E5552700DE9DA0 /* ChatBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				3000595329E555E500DE9DA0 /* ChatBuddyView.swift */,
+				3000596829E6A7E900DE9DA0 /* ChatModels.swift */,
+				3000595829E556F800DE9DA0 /* OpenAIAPI.swift */,
 				3000594529E5552700DE9DA0 /* ChatBuddyApp.swift */,
 				3000594729E5552700DE9DA0 /* ContentView.swift */,
+				3000596A29E6B86200DE9DA0 /* ChatMessageView.swift */,
 				3000594929E5552900DE9DA0 /* Assets.xcassets */,
 				3000594B29E5552900DE9DA0 /* Preview Content */,
 			);
@@ -83,6 +97,9 @@
 			dependencies = (
 			);
 			name = ChatBuddy;
+			packageProductDependencies = (
+				3000595629E556E400DE9DA0 /* Alamofire */,
+			);
 			productName = ChatBuddy;
 			productReference = 3000594229E5552700DE9DA0 /* ChatBuddy.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 3000593929E5552700DE9DA0;
+			packageReferences = (
+				3000595529E556E400DE9DA0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3000594329E5552700DE9DA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3000595929E556F800DE9DA0 /* OpenAIAPI.swift in Sources */,
 				3000594829E5552700DE9DA0 /* ContentView.swift in Sources */,
+				3000596B29E6B86200DE9DA0 /* ChatMessageView.swift in Sources */,
+				3000596929E6A7E900DE9DA0 /* ChatModels.swift in Sources */,
+				3000595429E555E500DE9DA0 /* ChatBuddyView.swift in Sources */,
 				3000594629E5552700DE9DA0 /* ChatBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +294,8 @@
 				DEVELOPMENT_TEAM = 62378C2F99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to capture user voice input.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app requires speech recognition to convert speech to text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +325,8 @@
 				DEVELOPMENT_TEAM = 62378C2F99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to capture user voice input.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app requires speech recognition to convert speech to text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +367,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3000595529E556E400DE9DA0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3000595629E556E400DE9DA0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3000595529E556E400DE9DA0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3000593A29E5552700DE9DA0 /* Project object */;
 }

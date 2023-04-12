@@ -1,21 +1,9 @@
-//
-//  ContentView.swift
-//  ChatBuddy
-//
-//  Created by Parth Dhawan on 11/4/23.
-//
-
 import SwiftUI
+import ChatBuddy
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ChatBuddyView(viewModel: ChatBuddyViewModel())
     }
 }
 

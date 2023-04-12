@@ -1,10 +1,3 @@
-//
-//  ChatBuddyApp.swift
-//  ChatBuddy
-//
-//  Created by Parth Dhawan on 11/4/23.
-//
-
 import SwiftUI
 
 @main
